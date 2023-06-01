@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área</title>
+    <script src="colorea.js"></script>
+</head>
+
+<body>
+    <h1>Introduce la base y la altura y te devuelvo el área del tríangulo o el rectángulo</h1>
+    <h2>Para el caso del círculo solo introduce el radio</h2>
+    <label for="inNum1">Base:</label><input type="number" id="inNum1"><br>
+    <label for="inNum2">Altura:</label><input type="number" id="inNum2"><br>
+    <hr>
+    <label for="inNum3">Radio:</label><input type="number" id="inNum3"><br>
+    <br>
+    <button onclick="areaTriangulo(parseInt(inNum1.value),parseInt(inNum2.value));">Calcular área
+        Triángulo</button><br>
+    <button onclick="areaRectangulo(parseInt(inNum1.value),parseInt(inNum2.value));">Calcular área
+        Rectángulo</button><br>
+    <button onclick="areaCirculo(parseInt(inNum3.value));">Calcular área círculo</button><br>
+    <hr>
+    <span id="resultado"></span>
+</body>
+
+</html>
