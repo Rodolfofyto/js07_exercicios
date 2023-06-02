@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+    <script>
+        // Como se llama: hipotenusa //
+        // Que hace: calcule la hipotenusa de un triángulo rectángulo en función de los dos catetos //
+        // Que recibe: dos lados del triángulo//
+        // Que devuelve: la hipotenusa según teorema de pitágoras//
+
+
+        function hipotenusa(L1, L2) {
+           return (Math.sqrt( Math.pow(L1, 2) + Math.pow(L2, 2)))
+        }
+
+        function calcular(L1, L2) {
+            document.getElementById('resultado').innerHTML = hipotenusa(L1, L2).toFixed(2);
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Calcula la hipotenusa del Tríangulo rectángulo a partir de dos de sus lados</h1>
+    <label for="inLado1">Lado 1:</label><input type="number" id="inLado1"><br>
+    <label for="inLado2">Lado 2:</label><input type="number" id="inLado2"><br>
+    <br>
+    <button onclick="calcular(parseFloat(inLado1.value),parseFloat(inLado2.value));">Calcular</button>
+    <hr>
+    <span id="resultado"></span>
+</body>
+</body>
+
+</html>

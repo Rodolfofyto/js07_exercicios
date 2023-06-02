@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+    <script>
+        // Como se llama: descuento //
+        // Que hace: a partir de un precio y un descuento, devuelve el precio con el descuento aplicado. //
+        // Que recibe: un precio y un descuento//
+        // Que devuelve: el precio con el descuento aplicado//
+
+
+        function descuento(p, d) {
+            if (p <= -1) {
+                return ("NaN");
+            } else { return (p * d); }
+        }
+
+        function calcular(p, d) {
+            document.getElementById('resultado').innerHTML = descuento(p, d).toFixed(2) + " €";
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Introduce el precio y el descuento</h1>
+    <label for="inPrecio">Precio:</label><input type="number" id="inPrecio"><br>
+    <label for="inDescuento">Descuento:</label>
+    <select name="descuento" id="inDescuento">
+        <option value="0.95">5%</option>
+        <option value="0.90">10%</option>
+        <option value="0.85">15%</option>
+        <option value="0.80">20%</option>
+        <option value="0.75">25%</option>
+        <option value="0.70">30%</option>
+        <option value="0.65">35%</option>
+        <option value="0.60">40%</option>
+        <option value="0.55">45%</option>
+        <option value="0.50">50%</option>
+        <option value="0.40">60%</option>
+    </select>
+    <br>
+    <button onclick="calcular(parseFloat(inPrecio.value),parseFloat(inDescuento.value));">Calcular</button>
+    <hr>
+    <span id="resultado"></span>
+</body>
+</body>
+
+</html>
