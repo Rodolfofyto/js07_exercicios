@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 8</title>
+    <style>
+        header,
+        main,
+        footer {
+            border: solid 1px #000000;
+            height: 150px;
+            margin-bottom: 1%;
+        }
+    </style>
+    <script>
+        function colorea(elemento, color) {
+            elemento.style.backgroundColor = color;
+        }
+
+    </script>
+</head>
+
+<body>
+    <header onclick="colorea(this, inColor.value);">Header</header>
+    <main onclick="colorea(this, inColor.value);">Main</main>
+    <footer onclick="colorea(this, inColor.value);">Footer</footer>
+    <label for="inColor">Color</label><input type="color" id="inColor" />
+</body>
+
+</html>

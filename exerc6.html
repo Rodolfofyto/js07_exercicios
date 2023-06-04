@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+    <script>
+        function doblar(imagen){
+            imagen.height*=2;
+            imagen.width*=2;
+        }
+    </script>
+</head>
+<body>
+    <img src="homer.jpg" onclick="doblar(this);" height="100" width="50" id="foto" />
+    <button onclick="doblar(foto);">Click-me</button>
+</body>
+</html>

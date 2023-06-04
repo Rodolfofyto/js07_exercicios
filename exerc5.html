@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+    <script>
+       
+        function esPrimo(no) {
+            if (no === 1) {
+                return ('El número no es primo');
+            } else if (no === 2) {
+                return ('El número es primo');
+            } else {
+                for (let i = 2; i <= no; i++) {
+                    if (no % i === 0) {
+                        return ('El número no es primo');
+                    } else {
+                        return ('El número es primo');
+                    }
+                }
+            }
+        }
+
+        function calcular(no) {
+            document.getElementById('resultado').innerHTML = esPrimo(no);
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Introduce el un número y te diré si es primo o no</h1>
+    <label for="inNumero">Número:</label><input type="number" id="inNumero"><br>
+    <br>
+    <button onclick="calcular(parseInt(inNumero.value));">Calcular</button>
+    <hr>
+    <span id="resultado"></span>
+</body>
+</body>
+
+</html>

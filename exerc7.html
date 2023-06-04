@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+    <script>
+        function escalar(elemento, escala) {
+            elemento.height *= escala;
+            elemento.width *= escala;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Aumenta la imagen según la escala deseada</h1>
+    <img src="homer.jpg" height="200" width="100" alt="Homer" title="Homer" onclick="escalar(this, parseFloat(inEscala.value));" />
+    <img src="homer.jpg" height="200" width="100" alt="Homer" title="Homer" onclick="escalar(this, parseFloat(inEscala.value));" />
+    <br />
+    <label for="inEscala">Escala:</label><input type="number" id="inEscala">
+</body>
+
+</html>
