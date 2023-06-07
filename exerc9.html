@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 9</title>
+    <script>
+        function impedanciaZ(r, l, c, f) {
+            let Xc = 1 / (2 * Math.PI * f * c);
+            let Xl = 2 * Math.PI * f * l;
+
+            return (Math.sqrt(r * r + Math.pow((Xl - Xc), 2)));
+        }
+
+        function calcular(r, l, c, f){
+             document.getElementById('resultado').innerHTML = impedanciaZ(r, l, c, f).toFixed(2);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Calcula la Impedancia total Z del un circuito RLC serie:</h1>
+    <label for="inR">Resistencia:</label><input type="number" id="inR" /><br />
+    <label for="inL">Inductancia de la bobina:</label><input type="number" id="inL" /><br />
+    <label for="inC">Capacidad del condensador:</label><input type="number" id="inC" /><br />
+    <label for="inF">Frecuencia de entrada:</label><input type="number" id="inF" /><br />
+    <br />
+    <button
+        onclick="calcular(parseFloat(inR.value), parseFloat(inL.value), parseFloat(inC.value), parseFloat(inF.value));">Calcular</button>
+<hr>
+<br>
+<span id="resultado"></span>
+</body>
+
+</html>
